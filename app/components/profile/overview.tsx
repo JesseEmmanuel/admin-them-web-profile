@@ -1,31 +1,155 @@
 import { useAppStore } from '@/app/store/useAppStore'
 import { Activity, ArrowUpRight, Terminal } from 'lucide-react'
-import React from 'react'
 import StatusDot from '../utilities/status-dot'
+import * as motion from "motion/react-client"
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
+import {
+    FaReact,
+    FaNodeJs,
+    FaLaravel,
+    FaPhp,
+    FaPython,
+    FaAws,
+    FaWordpress,
+    FaElementor
+} from 'react-icons/fa'
+import { BsTypescript } from 'react-icons/bs'
+import { RiNextjsFill } from 'react-icons/ri'
+import {
+    SiTailwindcss,
+    SiPostgresql,
+    SiMysql,
+    SiPrisma,
+    SiDjango,
+    SiNestjs
+} from 'react-icons/si'
+import { HyperText } from '@/components/ui/hyper-text'
 
 export default function Overview() {
     const { navigateToSection } = useAppStore()
+    const toolkit = [
+        {
+            name: 'React',
+            icon: <FaReact />,
+            color: '#61DAFB',
+        },
+        {
+            name: 'TypeScript',
+            icon: <BsTypescript />,
+            color: '#3178C6',
+        },
+        {
+            name: 'Next.js',
+            icon: <RiNextjsFill />,
+            color: '#FFFFFF', // White looks better on dark backgrounds
+        },
+        {
+            name: 'Tailwind',
+            icon: <SiTailwindcss />,
+            color: '#06B6D4',
+        },
+        {
+            name: 'Node.js',
+            icon: <FaNodeJs />,
+            color: '#339933',
+        },
+        {
+            name: 'Postgres',
+            icon: <SiPostgresql />,
+            color: '#336791',
+        },
+        {
+            name: 'MySQL',
+            icon: <SiMysql />,
+            color: '#4479A1',
+        },
+        {
+            name: 'Prisma ORM',
+            icon: <SiPrisma />,
+            color: '#5A67D8',
+        },
+        {
+            name: 'Laravel',
+            icon: <FaLaravel />,
+            color: '#FF2D20',
+        },
+        {
+            name: 'PHP',
+            icon: <FaPhp />,
+            color: '#777BB4',
+        },
+        {
+            name: 'Django',
+            icon: <SiDjango />,
+            color: '#44B78B',
+        },
+        {
+            name: 'Python',
+            icon: <FaPython />,
+            color: '#3776AB',
+        },
+        {
+            name: 'Nest.js',
+            icon: <SiNestjs />,
+            color: '#E0234E',
+        },
+        {
+            name: 'AWS',
+            icon: <FaAws />,
+            color: '#FF9900',
+        },
+        {
+            name: 'Wordpress',
+            icon: <FaWordpress />,
+            color: '#21759B',
+        },
+        {
+            name: 'Elementor',
+            icon: <FaElementor />,
+            color: '#D53184',
+        }
+    ]
     return (
         <>
-            <section id="overview" className="scroll-mt-24">
+            <section
+                id="overview"
+                className="scroll-mt-24">
                 <div className="flex flex-col justify-between gap-8 border-b border-border pb-8 md:flex-row md:items-end">
-                    <div><p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-300">
-                        / portfolio dashboard
-                    </p>
-                        <h1 className="mt-4 max-w-3xl text-balance font-mono text-4xl font-semibold tracking-[-0.06em] text-foreground sm:text-6xl">
+                    <motion.div
+                        initial={{ x: -20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: 20, opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-300">
+                            / portfolio dashboard
+                        </p>
+                        <h1 className="mt-4 max-w-3xl text-balance font-mono text-4xl font-semibold tracking-[-0.06em] text-foreground sm:text-6xl uppercase">
                             Building the web,
-                            <span className="text-muted-foreground">
+                            <HyperText className="text-muted-foreground">
                                 One thoughtful solution at a time.
-                            </span>
+                            </HyperText>
                         </h1>
                         <p className="mt-5 max-w-xl text-pretty text-sm leading-6 text-muted-foreground">
                             Full-stack web developer crafting robust, user-centric web experiences from frontend finesse to backend reliability.</p>
-                    </div>
-                    <div className="flex shrink-0 items-center gap-3 font-mono text-xs text-muted-foreground"><StatusDot /> OPEN TO WORK ANYTIME</div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ x: 20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: -20, opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="flex shrink-0 items-center gap-3 font-mono text-xs text-muted-foreground">
+                        <StatusDot /> OPEN TO WORK ANYTIME
+                    </motion.div>
                 </div>
             </section>
 
-            <section className="mt-5 grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mt-5 grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
                 <div className="overflow-hidden rounded-2xl border border-border bg-card">
                     <div className="flex items-center justify-between border-b border-border px-5 py-4">
                         <div className="flex items-center gap-2">
@@ -72,8 +196,17 @@ export default function Overview() {
                     <div className="flex items-center gap-2 font-mono text-sm">
                         <Terminal className="size-4 text-amber-300" />
                         Stack / toolkit</div>
-                    <div className="mt-7 flex flex-wrap gap-2">{['React', 'TypeScript', 'Next.js', 'Tailwind', 'Node.js', 'Postgres', 'MySQL', 'Prisma ORM', 'Laravel', 'PHP', 'Django', 'Python', 'Nest.js', 'AWS', 'Wordpress', 'Elementor'].map((item) =>
-                        <span key={item} className="rounded-md border border-border bg-muted/50 px-2.5 py-1.5 font-mono text-[11px] text-muted-foreground">{item}</span>)}
+                    <div className="mt-7 flex flex-wrap gap-2">
+                        {toolkit.map((item) => (
+                            <InteractiveHoverButton
+                                key={item.name}
+                                icon={item.icon}
+                                className="rounded-md border border-border bg-muted/50 px-2.5 py-1.5 font-mono text-[11px] text-muted-foreground"
+                                color={item.color}
+                            >
+                                {item.name}
+                            </InteractiveHoverButton>
+                        ))}
                     </div>
                     {/* <div className="mt-8 border-t border-border pt-5">
                         <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -84,7 +217,7 @@ export default function Overview() {
                         </p>
                     </div> */}
                 </div>
-            </section>
+            </motion.div>
         </>
     )
 }

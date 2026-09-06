@@ -1,3 +1,5 @@
+import { ProgressiveBlur } from '@/components/ui/progressive-blur'
+import { motion } from 'motion/react'
 import React from 'react'
 
 export default function Experience() {
@@ -42,7 +44,12 @@ export default function Experience() {
     return (
         <section id="experience" className="mt-20 scroll-mt-24">
             <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
-                <div>
+                <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: 20, opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
                     <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-300">
                         / system history
                     </p>
@@ -52,8 +59,13 @@ export default function Experience() {
                     <p className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">
                         A few chapters from a career spent navigating the space between design and engineering.
                     </p>
-                </div>
-                <div className="flex flex-col h-full max-h-125 overflow-y-auto">
+                </motion.div>
+                <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -20, opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col h-full max-h-125 overflow-y-auto">
                     {experience.map((item) =>
                         <div key={item.year} className="grid gap-3 border-t border-border py-5 sm:grid-cols-[130px_1fr]">
                             <p className="font-mono text-[11px] text-muted-foreground">{item.year}</p>
@@ -63,7 +75,7 @@ export default function Experience() {
                                 <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">{item.description}</p>
                             </div>
                         </div>)}
-                </div>
+                </motion.div>
             </div>
         </section>
     )

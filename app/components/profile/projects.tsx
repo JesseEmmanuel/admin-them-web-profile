@@ -3,6 +3,7 @@ import StatusDot from '../utilities/status-dot'
 import { ArrowUpRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { link } from 'fs'
+import { motion } from 'motion/react'
 
 export default function Projects() {
     const projects = [
@@ -49,21 +50,31 @@ export default function Projects() {
     ]
     return (
         <section id="projects">
-            <div className="flex items-end justify-between border-b border-border pb-4"><div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-300">
-                    / selected work
-                </p>
-                <h2 className="mt-2 text-2xl font-medium tracking-tight">
-                    Some projects I worked with
-                </h2>
-            </div>
-            </div>
-            <div className="my-5 grid gap-4 md:grid-cols-3 h-full max-h-125 overflow-y-scroll">
+            <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 20, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-end justify-between border-b border-border pb-4"><div>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-300">
+                        / selected work
+                    </p>
+                    <h2 className="mt-2 text-2xl font-medium tracking-tight">
+                        Some projects I worked with
+                    </h2>
+                </div>
+            </motion.div>
+            <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="my-5 grid gap-4 md:grid-cols-3 h-full max-h-125 overflow-y-scroll">
                 {projects.map((project) =>
                     <article key={project.name} className="flex flex-col justify-between group rounded-2xl border border-border bg-card p-4 transition-colors hover:border-cyan-300/40">
                         <div>
                             <div className={`flex items-end rounded-xl p-4 `}>
-                                <img className='rounded-lg' src={project.image} height={500} width={500} alt={`project ${project.name}`} />
+                                <img className='rounded-lg' loading='lazy' src={project.image} height={500} width={500} alt={`project ${project.name}`} />
                             </div>
                             <div className="flex items-start justify-between gap-4 pt-4">
                                 <div className='flex justify-between w-full mb-2'>
@@ -97,7 +108,7 @@ export default function Projects() {
                         </Button>
                     </article>
                 )}
-            </div>
+            </motion.div>
         </section>
     )
 }

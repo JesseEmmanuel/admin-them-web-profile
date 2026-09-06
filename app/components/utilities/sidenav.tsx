@@ -2,6 +2,7 @@ import { useAppStore } from '@/app/store/useAppStore'
 import BrandMark from './brand-mark'
 import { ArrowUpRight, BarChart3, BriefcaseBusiness, GitBranch, Globe2, Layers3, MessageSquareText, PanelLeftClose, PanelLeftOpen, X } from 'lucide-react'
 import StatusDot from './status-dot'
+import { useEffect, useRef } from 'react'
 
 const navItems = [
     { label: 'Overview', icon: BarChart3, href: '#overview' },
@@ -12,6 +13,8 @@ const navItems = [
 
 export default function Sidenav() {
     const { sidebarOpen, mobileNavOpen, activeSection, setMobileNavOpen, navigateToSection, toggleSidebar } = useAppStore()
+    const spotlightX = useRef(0);
+
     return (
         <>
             <aside className={`fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-border bg-card/95 px-4 py-5 backdrop-blur-xl transition-transform duration-300 lg:translate-x-0 ${mobileNavOpen ? 'translate-x-0' : '-translate-x-full'} ${sidebarOpen ? '' : 'lg:w-20'}`}>

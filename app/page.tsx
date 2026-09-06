@@ -8,6 +8,7 @@ import Sidenav from './components/utilities/sidenav'
 import StatusDot from './components/utilities/status-dot'
 import Header from './components/utilities/header'
 import Contact from './components/profile/contact'
+import { GlyphMatrix } from '@/components/ui/glyph-matrix'
 
 
 
@@ -23,8 +24,8 @@ export default function Page() {
 
       <div className={`min-h-screen transition-[padding] duration-300 ${sidebarOpen ? 'lg:pl-64' : 'lg:pl-20'}`}>
         <Header />
-
-        <main className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-10">
+        <GlyphMatrix />
+        <main className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-10 -mt-145.75">
           {activeSection === 'overview' &&
             <Overview />
           }
