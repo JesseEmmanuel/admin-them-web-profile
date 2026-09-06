@@ -10,6 +10,7 @@ export default function Projects() {
         {
             name: 'Visit Iloilo',
             type: 'Wordpress Website',
+            desc: 'A project from LGU that aims to empower tourism and introduce locals culture such as delicacies, events, tourist spots and etc. Made with wordpress and elementor',
             status: 'Live',
             metric: '+42%',
             color: 'bg-cyan-300',
@@ -20,6 +21,7 @@ export default function Projects() {
         {
             name: 'Bullpup-pty Ltd.',
             type: 'Landing page',
+            desc: 'A professional landing page designed for a local business to showcase its services, establish a strong online presence, and make it easy for potential customers to learn more and get in touch.',
             status: 'Live',
             metric: '18k',
             color: 'bg-amber-300',
@@ -30,6 +32,7 @@ export default function Projects() {
         {
             name: 'Parkfinder (Unofficial)',
             type: 'Web App Solution',
+            desc: 'A startup project aimed at helping users find parking spots in real-time. Built with RILT (React + Inertia + Laravel + Tailwind) stack, it features a user-friendly interface and integrates with MapLibre GL API (for now) for location services.',
             status: 'In-progress',
             metric: '94.8%',
             color: 'bg-fuchsia-300',
@@ -40,6 +43,7 @@ export default function Projects() {
         {
             name: 'We Are Stellar',
             type: 'Web App Solution',
+            desc: 'A web application built for pyramid type of business. Built this project with React JS on frontend + Laravel on backend. The application allows users to register and login to their account, view their profile, and view their downlines. Users can also view their earnings and withdraw their earnings.',
             status: 'Inactive',
             metric: '94.8%',
             color: 'bg-fuchsia-300',
@@ -77,19 +81,24 @@ export default function Projects() {
                                 <img className='rounded-lg' loading='lazy' src={project.image} height={500} width={500} alt={`project ${project.name}`} />
                             </div>
                             <div className="flex items-start justify-between gap-4 pt-4">
-                                <div className='flex justify-between w-full mb-2'>
-                                    <div className='flex flex-col'>
+                                <div className='flex flex-col w-full mb-2'>
+                                    <div className='flex justify-between'>
                                         <h3 className="font-medium">
                                             {project.name}
                                         </h3>
+                                        <span className={`ml-auto flex items-center gap-1 font-mono text-[10px] ${project.status === 'Live' ? 'text-emerald-300' : project.status === 'In-progress' ? 'text-amber-300' : 'text-red-300'}`}>
+                                            <span className={`inline-block size-1.5 rounded-full ${project.status === 'Live' ? 'bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]' : project.status === 'In-progress' ? 'bg-amber-400 shadow-[0_0_12px_rgba(252,211,77,0.8)]' : 'bg-red-400 shadow-[0_0_12px_rgba(248,113,113,0.8)]'}`} />
+                                            {project.status}
+                                        </span>
+                                    </div>
+                                    <div className='flex flex-col'>
                                         <p className="mt-1 text-xs text-muted-foreground">
                                             {project.type}
                                         </p>
+                                        <p className='mt-1 text-xs'>
+                                            {project.desc}
+                                        </p>
                                     </div>
-                                    <span className={`ml-auto flex items-center gap-1 font-mono text-[10px] ${project.status === 'Live' ? 'text-emerald-300' : project.status === 'In-progress' ? 'text-amber-300' : 'text-red-300'}`}>
-                                        <span className={`inline-block size-1.5 rounded-full ${project.status === 'Live' ? 'bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]' : project.status === 'In-progress' ? 'bg-amber-400 shadow-[0_0_12px_rgba(252,211,77,0.8)]' : 'bg-red-400 shadow-[0_0_12px_rgba(248,113,113,0.8)]'}`} />
-                                        {project.status}
-                                    </span>
                                 </div>
                             </div>
                             <div className="mt-4 flex items-center justify-between gap-2">
