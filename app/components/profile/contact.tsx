@@ -41,7 +41,7 @@ export default function Contact() {
                         Send a note
                         <Send className="size-4" />
                     </a>
-                    <a href="/Jesse_Emmanuel_Basco.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-lg bg-cyan-300 px-4 py-3 font-mono text-xs font-semibold text-slate-950 hover:bg-cyan-200">
+                    <a href="/Jesse_Emmanuel_Basco (2026).pdf" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-lg bg-cyan-300 px-4 py-3 font-mono text-xs font-semibold text-slate-950 hover:bg-cyan-200">
                         View / Download Resume
                         {/* <Send className="size-4" /> */}
                         <File className="size-4" />
