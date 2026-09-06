@@ -24,8 +24,7 @@ export default function Page() {
 
       <div className={`min-h-screen transition-[padding] duration-300 ${sidebarOpen ? 'lg:pl-64' : 'lg:pl-20'}`}>
         <Header />
-        <GlyphMatrix />
-        <main className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-10 -mt-145.75">
+        <main className="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:px-10">
           {activeSection === 'overview' &&
             <Overview />
           }
