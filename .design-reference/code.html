@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#003824", "error-container": "#93000a", "surface-container": "#1c2025", "primary-fixed-dim": "#4edea3", "surface-container-lowest": "#0a0e14", "on-tertiary-container": "#1d17b2", "surface-variant": "#31353b", "on-secondary-fixed-variant": "#004e5c", "on-secondary-container": "#00424e", "on-surface-variant": "#bbcabf", "outline-variant": "#3c4a42", "surface-dim": "#101419", "tertiary-fixed": "#e1e0ff", "on-tertiary": "#1000a9", "on-tertiary-fixed": "#07006c", "error": "#ffb4ab", "surface-container-low": "#181c21", "inverse-on-surface": "#2d3136", "on-primary-fixed-variant": "#005236", "primary-fixed": "#6ffbbe", "on-error": "#690005", "surface": "#101419", "outline": "#86948a", "secondary": "#4cd7f6", "tertiary": "#c0c1ff", "on-secondary-fixed": "#001f26", "background": "#101419", "inverse-primary": "#006c49", "primary-container": "#10b981", "inverse-surface": "#e0e2ea", "tertiary-fixed-dim": "#c0c1ff", "on-primary-fixed": "#002113", "secondary-container": "#03b5d3", "on-secondary": "#003640", "on-tertiary-fixed-variant": "#2f2ebe", "on-primary-container": "#00422b", "tertiary-container": "#9699ff", "on-background": "#e0e2ea", "primary": "#4edea3", "surface-bright": "#36393f", "surface-container-high": "#262a30", "surface-tint": "#4edea3", "secondary-fixed-dim": "#4cd7f6", "surface-container-highest": "#31353b", "secondary-fixed": "#acedff", "on-error-container": "#ffdad6", "on-surface": "#e0e2ea" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "0.75rem", "space-base": "1rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "space-2xs": "0.125rem", "space-2xl": "3rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xl": "2rem", "space-3xl": "4rem", "space-xs": "0.25rem", "sidebar-collapsed-width": "64px", "sidebar-width": "260px" }, "fontFamily": { "body-lg": [ "JetBrains Mono" ], "headline-sm": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "code-metric": [ "JetBrains Mono" ], "label-md": [ "JetBrains Mono" ], "display": [ "Space Grotesk" ], "body-sm": [ "JetBrains Mono" ], "headline-md": [ "Space Grotesk" ], "body-md": [ "JetBrains Mono" ], "label-sm": [ "JetBrains Mono" ], "headline-lg": [ "Space Grotesk" ] }, "fontSize": { "body-lg": [ "15px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "code-metric": [ "28px", { "lineHeight": "32px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "display": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-sm": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-md": [ "13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-sidebar-width bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="p-space-base"><div class="flex items-center gap-space-sm mb-space-xs"><span class="flex h-2 w-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#10b981]"></span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-wider">JEB.CONSOLE</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">v2.6</span></div><div class="flex items-center gap-space-2xs text-on-surface-variant font-label-sm text-label-sm tracking-wide"><span class="material-symbols-outlined text-[13px] text-primary">terminal</span><span>SYS_ACTIVE // READY_FOR_HIRE</span></div></div><nav class="flex flex-col gap-space-2xs px-space-sm pt-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="overview-system-metrics" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Overview / Metrics</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="experience-career-logs" href="#"><span class="material-symbols-outlined text-[18px]">timeline</span><span>Experience Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="deployed-projects-repos" href="#"><span class="material-symbols-outlined text-[18px]">deployed_code</span><span>Deployed Repos</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="tech-stack-modules" href="#"><span class="material-symbols-outlined text-[18px]">dns</span><span>Stack &amp; Modules</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="contact-dispatch" href="#"><span class="material-symbols-outlined text-[18px]">satellite_alt</span><span>Contact &amp; Dispatch</span></a></nav></div><div class="p-space-sm m-space-sm rounded bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Vv1-5610CVLwimoYRZhmLIWL_XicNlcJgcjcZmYReX8WIV-c6QAeDqeaDnDbyfWhwbmaKR3jKQwwH0mcXcmcYE5I3owiN629jGzFnO3Bdoz5n7FRG-RTy839C5DsUgfwHWlnZeRwzuUOKGTwWh01Dy3Emf4JtUcV-kOXnfHPLn9y72IHa8xefCwyvgoqFpO5AkFFAMYPmYNQeJ0ZloFD0jz69svySH7TaRMNhXyD4FvY4iBn9DrKGYrGq7"/><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface truncate font-semibold">Jesse Emmanuel B.</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Full-Stack Developer</span></div></div><div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-[14px]">code</span>git</a><a class="hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-[14px]">download</span>cv</a><a class="hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-[14px]">laptop_chromebook</span>sh</a></div></div></aside><div class="pl-sidebar-width min-h-screen bg-background flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="h-16 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm flex-1 max-w-md"><div class="relative w-full"><span class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">search</span></span><input class="w-full pl-9 pr-4 py-1.5 rounded bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-all" placeholder="Search stack, logs, repos... ⌘K" type="text"/></div></div><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-secondary">location_on</span><span>Bukidnon, PH</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-primary">history</span><span>Uptime: 3+ Yrs</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface"><span class="flex h-1.5 w-1.5 rounded-full bg-primary"></span><span>Ready for Hire</span></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-container hover:text-on-surface transition-all font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[15px]">mail</span><span class="hidden sm:inline">Copy Email</span></button><button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-[0_0_10px_rgba(16,185,129,0.3)]" type="button"><span class="material-symbols-outlined text-[15px]">download</span><span class="hidden sm:inline">Resume</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-space-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1Vv1-5610CVLwimoYRZhmLIWL_XicNlcJgcjcZmYReX8WIV-c6QAeDqeaDnDbyfWhwbmaKR3jKQwwH0mcXcmcYE5I3owiN629jGzFnO3Bdoz5n7FRG-RTy839C5DsUgfwHWlnZeRwzuUOKGTwWh01Dy3Emf4JtUcV-kOXnfHPLn9y72IHa8xefCwyvgoqFpO5AkFFAMYPmYNQeJ0ZloFD0jz69svySH7TaRMNhXyD4FvY4iBn9DrKGYrGq7"/></div></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full px-space-md sm:px-space-lg lg:px-space-xl pb-space-3xl gap-space-lg">
+<!-- TOP STATUS BANNER & COMMAND TELEMETRY BAR -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm py-space-sm px-space-base bg-surface-container-lowest rounded shadow-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-primary">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-ping"></span>
+        DISPATCH_ACTIVE
+      </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">|</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm tracking-wider">NODE: PH-BUKIDNON // SECTOR 10.43N 125.01E</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant font-label-sm text-label-sm">SYS_LATENCY: <span class="text-secondary font-code-metric text-body-sm">24ms</span></span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">DEPLOY_ENV: <span class="text-primary font-code-metric text-body-sm">PRODUCTION</span></span>
+<span class="text-on-surface-variant font-label-sm text-label-sm hidden sm:inline">CYCLE: 2026.Q2</span>
+</div>
+</div>
+<!-- KPI TELEMETRY ROW (4 STAT CARDS) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- METRIC 1 -->
+<div class="bg-surface-container p-space-base rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-space-sm">
+<span class="uppercase tracking-wider">01 // PRODUCTION UPTIME</span>
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+</div>
+<div class="font-code-metric text-code-metric text-on-surface flex items-baseline gap-1">
+<span>3+</span>
+<span class="font-label-md text-label-md text-primary font-normal">YEARS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Shipping resilient microservices &amp; client frontends.</p>
+<div class="mt-space-sm w-full bg-surface-container-lowest h-1 rounded overflow-hidden">
+<div class="bg-primary h-full w-[94%]"></div>
+</div>
+</div>
+<!-- METRIC 2 -->
+<div class="bg-surface-container p-space-base rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-space-sm">
+<span class="uppercase tracking-wider">02 // PRIMARY SPEC</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">layers</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface truncate font-semibold">
+        Full-Stack Systems
+      </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">TypeScript, Next.js, Nest.js, Laravel, Cloud Ops.</p>
+<div class="mt-space-sm flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>RILT &amp; Node Stack Master</span>
+</div>
+</div>
+<!-- METRIC 3 -->
+<div class="bg-surface-container p-space-base rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-space-sm">
+<span class="uppercase tracking-wider">03 // CONTRACT STATUS</span>
+<span class="material-symbols-outlined text-[18px] text-primary">sensors</span>
+</div>
+<div class="font-code-metric text-headline-sm text-primary flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_8px_#10b981]"></span>
+<span>READY FOR HIRE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Full-time, contract roles &amp; high-impact architecture.</p>
+<div class="mt-space-sm flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Allocation: 100%</span>
+<span class="text-primary font-semibold">AVAILABLE</span>
+</div>
+</div>
+<!-- METRIC 4 -->
+<div class="bg-surface-container p-space-base rounded shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-all">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-space-sm">
+<span class="uppercase tracking-wider">04 // GEOLOCATION</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">public</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">
+        Bukidnon, PH
+      </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Mindanao, Philippines (UTC+8 / Global Remote Ready)</p>
+<div class="mt-space-sm flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span>
+<span>Remote Overlap: US/EU/APAC</span>
+</div>
+</div>
+</div>
+<!-- DEVELOPER HERO CONSOLE BANNER -->
+<div class="bg-surface-container-low rounded p-space-base sm:p-space-xl relative overflow-hidden shadow-md">
+<div class="absolute -right-16 -top-16 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-16 -bottom-16 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="max-w-3xl flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>IDENTITY_RECORD: BASCO, JESSE EMMANUEL // VOL. 01_2026</span>
+</div>
+<h1 class="font-display text-headline-lg lg:text-display text-on-surface tracking-tight">
+          Hi, I'm Jesse.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          I'm a full-stack web developer based in the Philippines, focused on building scalable applications and thoughtful interfaces. 
+          <span class="text-on-surface">"I enjoy the messy middle: translating a hard problem into something clear, useful, and a little delightful."</span>
+</p>
+<!-- Command Prompt Quick Action Bar -->
+<div class="flex items-center flex-wrap gap-space-sm pt-space-sm">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-all shadow-[0_0_12px_rgba(16,185,129,0.35)]" href="#">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>VIEW RESUME ↗</span>
+</a>
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all" onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">outgoing_mail</span>
+<span>DISPATCH &amp; CONTACT</span>
+</button>
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all" href="https://github.com/JesseEmmanuel" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary">code</span>
+<span>GITHUB_REPOS</span>
+</a>
+</div>
+</div>
+<!-- Quick Command Telemetry Box -->
+<div class="lg:w-80 bg-surface-container-lowest p-space-base rounded flex flex-col gap-space-xs font-label-sm text-label-sm shadow-inner">
+<div class="flex items-center justify-between text-on-surface-variant pb-space-xs">
+<span>CONSOLE LOGS</span>
+<span class="text-primary font-code-metric text-body-sm">LIVE</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant space-y-1">
+<div class="text-primary">$ whoami</div>
+<div class="text-on-surface pl-2">&gt; Jesse Emmanuel Basco</div>
+<div class="text-primary">$ current_focus</div>
+<div class="text-on-surface pl-2">&gt; Next.js, Distributed APIs, RILT</div>
+<div class="text-primary">$ latency</div>
+<div class="text-secondary pl-2">&gt; 99.98% High Availability</div>
+<div class="text-primary">$ echo $MOTTO</div>
+<div class="text-on-surface pl-2">&gt; Building the web, one thoughtful solution at a time.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN TWO-COLUMN DASHBOARD SECTION: DEPLOYED REPOS & TELEMETRY -->
+<div class="flex flex-col gap-space-lg">
+<!-- SECTION TITLE -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-6 bg-primary rounded-xs"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+          DEPLOYED REPOSITORIES &amp; SYSTEMS
+        </h2>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">4 PROD BUILDS</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">PORTFOLIO INDEX // SEC. 03</span>
+</div>
+<!-- 4 FEATURED PROJECTS GRID -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- PROJECT 1: PARKFINDER -->
+<div class="bg-surface-container rounded overflow-hidden shadow-sm flex flex-col group hover:bg-surface-container-high transition-all">
+<div class="relative h-60 w-full overflow-hidden bg-surface-container-lowest">
+<img alt="Parkfinder Project Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida/AEtjO1XNNY_MVtNBnHi9ZbINEXANt9O1gcB4idW1bZuQtWn8_rfjBHk17IU7Kuk9Eq9nfOeb_kovXNGQInRAc7ovrqnDgwEjk8-1ZuDkXFrFmfFoaPPPGdyHieivg-lCeMtEVh4rMvZjAQ1PN5k2eV4NJUYI22ydi3ZQW7mPG6KVivkLWDObcFs-dmv3F5tvkX5DdEGA3lcqNe9xUKcWaizPAXZffxADU0Rv3ElMsEd_Ma1CvfeEhzX1ijUKom8m"/>
+<div class="absolute top-space-sm left-space-sm px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>RILT STACK / STARTUP</span>
+</div>
+<div class="absolute top-space-sm right-space-sm px-2 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+            WIP // MAPS
+          </div>
+</div>
+<div class="p-space-base flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Parkfinder WIP (unofficial)
+              </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">01/04</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Startup project aimed at helping users find parking spots in real-time. Built with RILT (React + Inertia + Laravel + Tailwind) stack, it features a responsive driver interface and integrates with MapLibre GL for accurate geocoding and routing telemetry.
+            </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-primary">Laravel</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-secondary">Inertia.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface">React</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface">Tailwind CSS</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-tertiary">MapLibre GL</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">PostgreSQL</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary hover:underline" href="https://github.com/JesseEmmanuel/park-finder" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>VIEW REPOSITORY ↗</span>
+</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant">STATUS: 200 OK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJECT 2: WE ARE STELLAR -->
+<div class="bg-surface-container rounded overflow-hidden shadow-sm flex flex-col group hover:bg-surface-container-high transition-all">
+<div class="relative h-60 w-full overflow-hidden bg-surface-container-lowest">
+<img alt="We Are Stellar App Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida/AEtjO1XtxzQqeUFgWcRzFfY-zdnitRRqInwCPJW2QoHAXhxk78Xs62RmTo5XjtV-8wnzgaRTUg0tfoAQTM8Y_U0jrN8scJRvS6eI0H0LiNS2dxud53ca7XNEZtORDXUOulupQ3xlf_jZwZWZqPjBdIepCN_-gp1Y4CDvtKJr83w0yAPFSasiuuXt4phbvB9igqa61Gli0ZXezDfw1UTAmYAheKiTY-5_BMmYFuYma1Kq-kW4gBNh-r54dlD8ckGP"/>
+<div class="absolute top-space-sm left-space-sm px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>FINTECH PLATFORM</span>
+</div>
+<div class="absolute top-space-sm right-space-sm px-2 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+            FULL STACK
+          </div>
+</div>
+<div class="p-space-base flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-secondary transition-colors">
+                We are Stellar
+              </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">02/04</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Comprehensive web application built for network structures. Engineered with React JS on frontend paired with high-throughput Laravel APIs. Facilitates account lifecycle, nested downline mapping, rebate calculations, and an instant financial withdrawal gateway.
+            </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface">React</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-primary">Laravel</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-secondary">Bootstrap</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">Axios</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-tertiary">PostgreSQL</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:underline" href="https://github.com/JesseEmmanuel/stellarweb" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>EXPLORE WORK ↗</span>
+</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant">COMMITS: 85+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJECT 3: BULLPUP LANDING PAGE -->
+<div class="bg-surface-container rounded overflow-hidden shadow-sm flex flex-col group hover:bg-surface-container-high transition-all">
+<div class="relative h-60 w-full overflow-hidden bg-surface-container-lowest">
+<img alt="Bullpup PTY LTD Website Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida/AEtjO1Va49RpUtsa0i4VlfccFHQvFSS3PM-WJi5NUHbInsyy4WAPFhAIgOGd-vEqbBpzP4VLiNaL8oZ1cx79gvPVYa8DssECGinTxK2_W-Rtpin3pJWCnTounjZokV0pYU_ztqgzPHE0X_rcG63f4fQOUBJ9eYZ-mPZJsxosifJjWTjJoOmeaAX0i5ifXmhbXcjFPq0LBWYJcKhXnusepOzheqAGaBH1pst7nNJ-h6G3qJoAkBmWWN9eUap1QeI"/>
+<div class="absolute top-space-sm left-space-sm px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>HIGH CONVERSION UX</span>
+</div>
+<div class="absolute top-space-sm right-space-sm px-2 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+            AU COMMERCIAL
+          </div>
+</div>
+<div class="p-space-base flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-primary transition-colors">
+                Bullpup Landing Page
+              </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">03/04</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              A high-converting, polished web presence crafted for a premium bricklaying contractor in Penrith, NSW Australia. Implemented ultra-fast React components, responsive modern styling, transactional lead dispatch via Resend, and high SEO search score.
+            </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface">React</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-primary">Tailwind CSS</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-secondary">Resend</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">SEO Score 98%</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary hover:underline" href="https://bullpupptyltd.com/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>LIVE SYSTEM ↗</span>
+</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HOSTED: VERCEL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJECT 4: ILOILO DIRECTORY WEBSITE -->
+<div class="bg-surface-container rounded overflow-hidden shadow-sm flex flex-col group hover:bg-surface-container-high transition-all">
+<div class="relative h-60 w-full overflow-hidden bg-surface-container-lowest">
+<img alt="Green MICE Iloilo Tourism Portal Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida/AEtjO1WqlorPuHjZK1ar0SjnMrpgcC6iEJybk-Te1hjOPkw3oc09xsw4v9oIZxb3tMSRdJapCuK60pf-3sMUruP7l9nZhyXk-KM8nAdgSWy-hwXcKdWU6XEH2P8L3OPVXsLcUgyenYGiGzbdzgbq3WKfVCh6AFS_3jQyqmugghOG7axF7m7Yz0c0rwWoV9aqX2HkL1clFEN0aP3q04thKHGQIP-pzILRX2qyQMEIHmKTB5Kar8_i8Nbn-mfs2z8"/>
+<div class="absolute top-space-sm left-space-sm px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md text-tertiary font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>PUBLIC SECTOR / CMS</span>
+</div>
+<div class="absolute top-space-sm right-space-sm px-2 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+            GOV / TOURISM
+          </div>
+</div>
+<div class="p-space-base flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold group-hover:text-tertiary transition-colors">
+                Iloilo Directory Website
+              </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">04/04</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              An official local government unit (LGU) tourism and events portal constructed to introduce city culture, heritage landmarks, local delicacies, and MICE conferences. High traffic caching, optimized media assets, and custom responsive layouts.
+            </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-tertiary">WordPress</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-primary">Elementor Pro</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface">PHP</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant">MySQL</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-tertiary hover:underline" href="https://visitiloilocity.com/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">public</span>
+<span>VISIT WEBSITE ↗</span>
+</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CLIENT: LGU ILOILO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SPLIT SECTION: CAREER AUDIT LOGS (LEFT) & TECH STACK MATRIX (RIGHT) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- CAREER AUDIT & TIMELINE TABLE (8 COLS) -->
+<div class="lg:col-span-8 bg-surface-container rounded p-space-base sm:p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">CAREER AUDIT &amp; EXPERIENCE TIMELINE</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sequential historical track of shipped production systems</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+          6 LOGGED NODES
+        </span>
+</div>
+<!-- TIMELINE LOG ENTRIES -->
+<div class="flex flex-col gap-space-sm">
+<!-- LOG 01 -->
+<div class="p-space-base bg-surface-container-low rounded hover:bg-surface-container-high transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="font-code-metric text-headline-sm text-primary font-bold">01</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Frontend Developer</h3>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">@ Tidewrk</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Maintained and optimized client-facing web applications using Next.js and TypeScript across production environments. Built complex stateful features with React Hook Form, Zod schema validation, React Query cache invalidation, and styled componentry with shadcn/ui.
+              </p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<span class="font-label-sm text-label-sm text-primary px-2 py-1 rounded bg-surface-container">SEP 2025 – JUL 2026</span>
+</div>
+</div>
+<!-- LOG 02 -->
+<div class="p-space-base bg-surface-container-low rounded hover:bg-surface-container-high transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="font-code-metric text-headline-sm text-secondary font-bold">02</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Software Engineer</h3>
+<span class="px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">@ KodaKollectiv</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Built and containerized RESTful APIs with Nest.js, Laravel, Django, and Prisma ORM. Deployed and orchestrated resilient backend architectures on AWS Elastic Beanstalk and Amazon RDS PostgreSQL instances for high-concurrency client applications.
+              </p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-1 rounded bg-surface-container">OCT 2023 – SEP 2025</span>
+</div>
+</div>
+<!-- LOG 03 -->
+<div class="p-space-base bg-surface-container-low rounded hover:bg-surface-container-high transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="font-code-metric text-headline-sm text-on-surface-variant font-bold">03</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">WordPress Developer</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">@ Human Incubator Inc.</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Maintained and enhanced client web portals, resolving database query bottlenecks and enforcing rigorous security practices. Authored bespoke plugins and child themes satisfying exact enterprise specifications.
+              </p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-1 rounded bg-surface-container">JUL – SEP 2023</span>
+</div>
+</div>
+<!-- LOG 04 -->
+<div class="p-space-base bg-surface-container-low rounded hover:bg-surface-container-high transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="font-code-metric text-headline-sm text-on-surface-variant font-bold">04</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tech Support &amp; WP Dev</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">@ Govesmart Solutions Inc.</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Built responsive cross-browser web interfaces, triaged user technical bottlenecks, and established reliable server deployment workflows that substantially expanded organic client web traffic.
+              </p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-1 rounded bg-surface-container">2021 – 2023</span>
+</div>
+</div>
+<!-- LOG 05 -->
+<div class="p-space-base bg-surface-container-low rounded hover:bg-surface-container-high transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="font-code-metric text-headline-sm text-on-surface-variant font-bold">05</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Freelance Web Developer</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">@ Self-Employed</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Delivered tailored digital products for small and medium businesses employing React, WordPress, and Laravel. Created headless API bindings that drastically streamlined customer acquisition.
+              </p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-1 rounded bg-surface-container">2021 – 2022</span>
+</div>
+</div>
+<!-- LOG 06 -->
+<div class="p-space-base bg-surface-container-low rounded hover:bg-surface-container-high transition-colors flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="font-code-metric text-headline-sm text-on-surface-variant font-bold">06</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Junior Systems Engineer</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">@ Apollo Technologies Inc.</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Configured and sustained Linux server nodes in high-availability environments. Executed complex MySQL database clustering, replication protocols, and zero-downtime failover systems for enterprise infrastructure.
+              </p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-1 rounded bg-surface-container">2020 – 2021</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TECH STACK & INSTALLED MODULES MATRIX (4 COLS) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- STACK CLUSTER -->
+<div class="bg-surface-container rounded p-space-base flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">memory</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">INSTALLED MODULES</h2>
+</div>
+<span class="text-primary font-label-sm text-label-sm">SYS_V2.6</span>
+</div>
+<!-- CATEGORY: FRONTEND -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="uppercase">Layer 01 // Frontend Tier</span>
+<span class="text-primary">100% HEALTH</span>
+</div>
+<div class="flex flex-wrap gap-1.5 p-space-sm bg-surface-container-lowest rounded">
+<span class="px-2 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">React.js</span>
+<span class="px-2 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Next.js</span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm">TypeScript</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Tailwind CSS</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">React Query</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Zod</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">shadcn/ui</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Inertia.js</span>
+</div>
+</div>
+<!-- CATEGORY: BACKEND & API -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="uppercase">Layer 02 // Backend &amp; Runtime</span>
+<span class="text-secondary">ACTIVE</span>
+</div>
+<div class="flex flex-wrap gap-1.5 p-space-sm bg-surface-container-lowest rounded">
+<span class="px-2 py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">Nest.js</span>
+<span class="px-2 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Laravel</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Django</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">PHP</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Node.js</span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm">WebSockets</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">REST &amp; RPC</span>
+</div>
+</div>
+<!-- CATEGORY: DATA & INFRASTRUCTURE -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="uppercase">Layer 03 // Data &amp; Cloud Infra</span>
+<span class="text-tertiary">STABLE</span>
+</div>
+<div class="flex flex-wrap gap-1.5 p-space-sm bg-surface-container-lowest rounded">
+<span class="px-2 py-1 rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-semibold">PostgreSQL</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">MySQL</span>
+<span class="px-2 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Prisma ORM</span>
+<span class="px-2 py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">AWS Beanstalk &amp; RDS</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Linux SysAdmin</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Git CI/CD</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Docker</span>
+</div>
+</div>
+<!-- CATEGORY: CMS -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="uppercase">Layer 04 // CMS Solutions</span>
+<span class="text-on-surface-variant">READY</span>
+</div>
+<div class="flex flex-wrap gap-1.5 p-space-sm bg-surface-container-lowest rounded">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">WordPress</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Elementor</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Headless WP</span>
+</div>
+</div>
+</div>
+<!-- INLINE SVG RADAR / THROUGHPUT VISUALIZATION -->
+<div class="bg-surface-container rounded p-space-base flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>STACK COVERAGE SPECTRUM</span>
+<span class="text-primary font-semibold">100% FULL-SPECTRUM</span>
+</div>
+<div class="relative flex items-center justify-center p-space-sm">
+<!-- Lightweight SVG Radar Graphic -->
+<svg class="w-48 h-48 text-on-surface-variant/20" fill="none" stroke="currentColor" viewbox="0 0 200 200">
+<!-- Concentric rings -->
+<circle cx="100" cy="100" r="80" stroke-dasharray="2 2" stroke-width="1"></circle>
+<circle cx="100" cy="100" r="55" stroke-width="1"></circle>
+<circle cx="100" cy="100" r="30" stroke-dasharray="2 2" stroke-width="1"></circle>
+<!-- Axis lines -->
+<line stroke-width="1" x1="100" x2="100" y1="20" y2="180"></line>
+<line stroke-width="1" x1="20" x2="180" y1="100" y2="100"></line>
+<line stroke-dasharray="2 2" stroke-width="1" x1="43" x2="157" y1="43" y2="157"></line>
+<line stroke-dasharray="2 2" stroke-width="1" x1="43" x2="157" y1="157" y2="43"></line>
+<!-- Active skill polygon (Fullstack profile) -->
+<polygon fill="rgba(78, 222, 163, 0.2)" points="100,32 165,85 140,165 65,155 35,90" stroke="#4edea3" stroke-width="2"></polygon>
+<!-- Anchor dots -->
+<circle cx="100" cy="32" fill="#4edea3" r="3"></circle>
+<circle cx="165" cy="85" fill="#4cd7f6" r="3"></circle>
+<circle cx="140" cy="165" fill="#4edea3" r="3"></circle>
+<circle cx="65" cy="155" fill="#c0c1ff" r="3"></circle>
+<circle cx="35" cy="90" fill="#4edea3" r="3"></circle>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-2 text-center font-label-sm text-label-sm text-on-surface-variant">
+<div class="bg-surface-container-low py-1 rounded">Architecture: <span class="text-primary font-bold">98%</span></div>
+<div class="bg-surface-container-low py-1 rounded">Frontend UI: <span class="text-secondary font-bold">96%</span></div>
+<div class="bg-surface-container-low py-1 rounded">APIs &amp; Cloud: <span class="text-primary font-bold">94%</span></div>
+<div class="bg-surface-container-low py-1 rounded">Data Schemas: <span class="text-tertiary font-bold">92%</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- DISPATCH CONSOLE / DIRECT CONTACT MODULE -->
+<div class="bg-surface-container rounded p-space-base sm:p-space-xl relative overflow-hidden shadow-md" id="contact-section">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-xl">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">satellite_alt</span>
+<span>DISPATCH COMMUNICATOR // 04</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Let's make something useful.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Have a project, a full-time engineering mandate, or an ambitious software idea? Open for contract roles and distributed software engineering opportunities globally.
+        </p>
+</div>
+<!-- DIRECT DISPATCH CARD -->
+<div class="bg-surface-container-lowest p-space-base sm:p-space-lg rounded flex flex-col gap-space-sm sm:w-[420px] shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>DIRECT DISPATCH FEED</span>
+<span class="flex items-center gap-1 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            LISTENING
+          </span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded flex items-center justify-between gap-space-sm">
+<span class="font-code-metric text-body-md text-primary truncate select-all" id="email-address">
+            jesseemmanuel@gmail.com
+          </span>
+<button class="shrink-0 px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-all flex items-center gap-1" id="copy-email-btn" onclick="copyEmailToClipboard()" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copy-btn-label">COPY</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="flex-1 py-2 rounded bg-surface-container-high text-on-surface font-label-md text-label-md text-center hover:bg-surface-bright transition-colors flex items-center justify-center gap-1.5" href="mailto:jesseemmanuel@gmail.com">
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+<span>SEND EMAIL ↗</span>
+</a>
+<a class="flex-1 py-2 rounded bg-surface-container-high text-on-surface font-label-md text-label-md text-center hover:bg-surface-bright transition-colors flex items-center justify-center gap-1.5" href="https://github.com/JesseEmmanuel" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span>GITHUB ↗</span>
+</a>
+</div>
+</div>
+</div>
+<!-- TERMINAL FOOTER META -->
+<div class="mt-space-xl pt-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<div>JESSE EMMANUEL BASCO // FULL-STACK SOFTWARE DEVELOPER</div>
+<div>© 2026 // BUKIDNON MINDANAO, PH // ALL TELEMETRY VERIFIED</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE SCRIPTS (Clipboard micro-interaction & search filter hooks) -->
+<script>
+  function copyEmailToClipboard() {
+    const email = "jesseemmanuel@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      const label = document.getElementById('copy-btn-label');
+      const btn = document.getElementById('copy-email-btn');
+      if (label && btn) {
+        label.innerText = 'COPIED!';
+        btn.classList.add('bg-secondary', 'text-on-secondary');
+        setTimeout(() => {
+          label.innerText = 'COPY';
+          btn.classList.remove('bg-secondary', 'text-on-secondary');
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  }
+</script></main></div></body></html>
